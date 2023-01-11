@@ -36,9 +36,6 @@ INIT:
     F.FT = ''
     CALL OPF(FN.FT, F.FT)
 
-    *SEL.CMD = "SELECT ":FN.ATI.TH.COLLATERAL:" WITH COLL.LINK.ID NE ''"
-    *CALL EB.READLIST(SEL.CMD,SEL.LIST, '', SEL.NO, SEL.ERR)
-
 	RETURN
 
 *-----------------------------------------------------------------------------
