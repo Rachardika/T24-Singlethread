@@ -1,0 +1,43 @@
+Funds.Transfer
+1. Transaction Type
+2. Debit Account Number
+3. Debit Currency
+4. Debit Value Date
+5. Debit Amount
+6. Credit Account No
+7. Credit Currency
+8. Credit Value Date
+9. Ordering Bank
+10. Processing Date
+                Local Fields
+11. ATI.BEN.NAME (Subvalue) Max 35 Characters
+12. ATI.PAYMENT.DETAILS (Multivalue) Max 35 Characters Alphanumeric
+
+Bikin Routine Automatic Default untuk Transaction Type = AC
+Bikin Routine Check ID, Belakang nya tambahin CW (Case Withdrawal)
+
+Buat Table Local (ATI.TH.FT.CASH.WITHDRAWAL)
+1. ID
+2. Account Debit
+3. Customer Debit
+4. SHORT.NAME
+5. Currency Debit
+6. Amount Debit
+7. Account Credit
+8. Currency Credit
+9. Processing Date
+10. ATI.BEN.NAME (single value) convert or change
+11. ATI.PAYMENT.DETAILS (single value)
+
+- F.READ ke Table Account ke ac.customer sama short name
+
+Bikin Routine After AUTH
+
+Habis di input, buat Enquiry buat nampilkan Local Table
+HEADER
+DATA TRANSAKSI TARIK TUNAI
+
+Bikin routine single thread, extract datanya, write to text file, minimum 25 kali
+
+
+PRINT ==> DATANE ==> ASHDGAJSDGH^ASDAJSKHKAJSHDKAJH^ASJDAHSDHAKSD
